@@ -10,3 +10,10 @@ class DataIngestionConfig:  #This class stores data and defines the data type
     local_data_file: Path
     unzip_dir: Path
 
+
+
+@dataclass(frozen=True)
+class DataValidationConfig:
+    root_dir: Path
+    STATUS_FILE: str
+    ALL_REQUIRED_FILES: list
