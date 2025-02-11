@@ -1,6 +1,11 @@
 FROM python:3.8-slim-buster
 
+RUN apt-get update && apt-get install -y \
+    gcc \
+    build-essential
+
 RUN apt update -y && apt install awscli -y
+
 WORKDIR /app
 
 COPY . /app
